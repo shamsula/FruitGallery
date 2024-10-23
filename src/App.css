@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.App button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.App table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.App th, .App td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
