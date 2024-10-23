@@ -20,3 +20,18 @@
   padding: 8px;
   text-align: left;
 }
+
+.App h3 {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App ul {
+  padding-left: 20px;
+}
+
+.App button {
+  margin-right: 10px;
+}

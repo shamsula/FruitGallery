@@ -1,5 +1,3 @@
-// src/services/mockFruitService.ts
-
 interface Nutrition {
     calories: number;
     fat: number;
