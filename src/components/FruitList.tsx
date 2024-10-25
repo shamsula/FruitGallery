@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Fruit } from '../hooks/useFruits';
+import '../styles/FruitList.scss';
+
 
 interface FruitListProps {
   fruits: Fruit[];
@@ -40,7 +42,7 @@ const FruitList: React.FC<FruitListProps> = ({ fruits, onAddFruit, onAddGroup })
   };
 
   return (
-    <div>
+    <div className="fruit-list">
       <h2>Fruits</h2>
       <div>
         <label htmlFor="groupBy">Group by: </label>
@@ -50,8 +52,10 @@ const FruitList: React.FC<FruitListProps> = ({ fruits, onAddFruit, onAddGroup })
           <option value="order">Order</option>
           <option value="genus">Genus</option>
         </select>
-        <button onClick={() => setView('list')}>List View</button>
-        <button onClick={() => setView('table')}>Table View</button>
+        <div className="view-buttons">
+          <button onClick={() => setView('list')}>List View</button>
+          <button onClick={() => setView('table')}>Table View</button>
+        </div>
       </div>
 
       {Object.entries(groupedFruits).map(([group, fruits]) => (
