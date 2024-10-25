@@ -1,4 +1,3 @@
-// src/hooks/useFruits.ts
 import { useEffect, useState } from 'react';
 import { fetchMockFruits } from '../api/mockFruitData';
 

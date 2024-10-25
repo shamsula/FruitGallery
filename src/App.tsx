@@ -15,6 +15,15 @@ const App: React.FC = () => {
     setJar((prevJar) => [...prevJar, ...group]);
   };
 
+  const removeFruitFromJar = (index: number) => {
+    setJar((prevJar) => prevJar.filter((_, i) => i !== index));
+  };
+
+  const clearJar = () => {
+    setJar([]);
+  };
+  
+
   return (
     <div className="App" style={{ display: 'flex', padding: '20px' }}>
       <div style={{ flex: 1, marginRight: '20px' }}>
@@ -29,7 +38,11 @@ const App: React.FC = () => {
         )}
       </div>
       <div style={{ flex: 1 }}>
-        <Jar fruits={jar} />
+        <Jar
+          fruits={jar}
+          onRemoveFruit={removeFruitFromJar}
+          onClearJar={clearJar}
+        />
       </div>
     </div>
   );
